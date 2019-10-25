@@ -6,7 +6,7 @@ const express = require('express');
 
 
 // routes
-// const routes = require('./routes/');
+const routes = require('./routes/routes');
 
 
 const app = express();

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HasheebKazi/cps530final/issues"
   },
-  "homepage": "https://github.com/HasheebKazi/cps530final#readme"
+  "homepage": "https://github.com/HasheebKazi/cps530final#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
