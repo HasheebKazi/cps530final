@@ -1,0 +1,19 @@
+{
+  "name": "cps530final",
+  "version": "0.1.0",
+  "description": "cps 530 final",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HasheebKazi/cps530final.git"
+  },
+  "author": "Hasheeb Kazi, Al Alwaini, Owen Goodwin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HasheebKazi/cps530final/issues"
+  },
+  "homepage": "https://github.com/HasheebKazi/cps530final#readme"
+}
