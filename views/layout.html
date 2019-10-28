@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#ffffff">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active is-dark');
+                        $target.classList.toggle('is-active is-dark');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</head>
+<section class="section">
+    <div class="container">
+      <h1 class="title">Lorem ipsum dolor </h1>
+      <h2 class="subtitle is-5">
+        October 28, 2019
+      </h2>
+
+      <p>sit amet consectetur adipisicing elit. Debitis, eveniet. Atque illo libero reprehenderit blanditiis eligendi dolorem rerum placeat quas nulla sequi dicta accusantium numquam explicabo eius, quis iste? Consectetur?</p>
+      <br>
+      <blockquote>how to make hero images</blockquote>
+      <textarea disabled rows="35" cols="88" style="margin-top: 1%; background-color: aqua;"><section class="hero is-success is-fullheight"
+        style="background-image: url('hero.png'); background-repeat: no-repeat; width: 100%; background-size: cover;">
+        <!-- Hero head: will stick at the top -->
+
+        <div class="hero-head">
+            <header class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <img src="" style="width:50; height: 50;" alt="Logo"> logo
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-black is-active" href="home.html">
+                                Home
+                            </a>
+                            <a class="navbar-item" href="">
+                                Project
+                            </a>
+
+                            <a class="navbar-item" href="">
+                                Team
+                            </a>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+
+
+                <img src="" style="width:50; height: 50;" alt="CPS530 final project">
+                <h1 class="title is-1">Ryerson University</h1>
+
+
+            </div>
+        </div>
+    </section>
+</textarea>
+    </div>
+    
+  </section>
+<body>
+
+</body>
+
+</html>
