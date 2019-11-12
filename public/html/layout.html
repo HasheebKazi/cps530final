@@ -39,71 +39,242 @@
 
         });
     </script>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        textarea {
+            /* background-image: url("beanstalk.png"); */
+            background-color: #262626;
+            background-size: 100%;
+            background-repeat: repeat;
+            color: white;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+    </style>
 </head>
-<section class="section">
-    <div class="container">
-      <h1 class="title">Lorem ipsum dolor </h1>
-      <h2 class="subtitle is-5">
-        October 28, 2019
-      </h2>
 
-      <p>sit amet consectetur adipisicing elit. Debitis, eveniet. Atque illo libero reprehenderit blanditiis eligendi dolorem rerum placeat quas nulla sequi dicta accusantium numquam explicabo eius, quis iste? Consectetur?</p>
-      <br>
-      <blockquote>how to make hero images</blockquote>
-      <textarea disabled rows="35" cols="88" style="margin-top: 1%; background-color: aqua;"><section class="hero is-success is-fullheight"
-        style="background-image: url('hero.png'); background-repeat: no-repeat; width: 100%; background-size: cover;">
-        <!-- Hero head: will stick at the top -->
+<body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="http://socialwedia.com/avatars/ryersonuniversity.png" width="28" height="28">
+            </a>
 
-        <div class="hero-head">
-            <header class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item">
-                            <img src="" style="width:50; height: 50;" alt="Logo"> logo
-                        </a>
-                        <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+            <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-end">
+                            <a class="navbar-item">
+                                    Home
+                                </a>
+                
+                                <a class="navbar-item">
+                                    Why Bulma
+                                </a>
+                
+                                <a class="navbar-item">
+                                    Why NodeJS
+                                </a>
+                
+                                <a class="navbar-item">
+                                    Team
+                                </a>
+                
+                                <a class="navbar-item">
+                                        Tutorials
+                                      </a>
                     </div>
-                    <div id="navbarMenuHeroC" class="navbar-menu">
-                        <div class="navbar-end">
-                            <a class="navbar-item is-black is-active" href="home.html">
-                                Home
-                            </a>
-                            <a class="navbar-item" href="">
-                                Project
-                            </a>
+                  </div>
+        </div>
 
-                            <a class="navbar-item" href="">
-                                Team
-                            </a>
-                            
-                            
+        <!-- <div id="navbarBasicExample" class="navbar-menu">
+            
+            <div class="navbar-end">
+                    <a class="navbar-item">
+                            Home
+                        </a>
+        
+                        <a class="navbar-item">
+                            Why Bulma
+                        </a>
+        
+                        <a class="navbar-item">
+                            Why NodeJS
+                        </a>
+        
+                        <a class="navbar-item">
+                            Team
+                        </a>
+        
+                        <a class="navbar-item">
+                                Tutorials
+                              </a>
+            </div>
+        </div> -->
+    </nav>
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Build a Great Looking Website with Bulma </h1>
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-3by1">
+                        <img src="bulma-banner.png" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="pp.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
                         </div>
                     </div>
+
+                    <div class="content">
+                        In this tutorial we are going to build a landing page using <a>@bulmaio</a>.
+
+                        <br>
+                        <h2 class="subtitle is-6" style="opacity: 70%;">
+                            October 28, 2019
+                        </h2>
+
+                        <button class="button is-info">View Code on Github</button>
+                    </div>
                 </div>
-            </header>
-        </div>
-        <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-            <div class="container has-text-centered">
+            </div>
 
 
-                <img src="" style="width:50; height: 50;" alt="CPS530 final project">
-                <h1 class="title is-1">Ryerson University</h1>
+            <br>
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="box is-half">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <h2>Table of Content</h2><br>
+                                    <a href="#setUp">Set up environment</a><br>
+                                    <a href="#starterTemplate">Starter Template</a><br>
+                                    <a href="#heroImg">How to Make Hero Images</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
 
 
             </div>
-        </div>
-    </section>
-</textarea>
-    </div>
-    
-  </section>
-<body>
 
-</body>
+            <div class="box">
+                <p>sit amet consectetur adipisicing elit. Debitis, eveniet. Atque illo libero reprehenderit blanditiis
+                    eligendi
+                    dolorem rerum placeat quas nulla sequi dicta accusantium numquam explicabo eius, quis iste?
+                    Consectetur?</p>
+                <br>
+
+                <h2 id="setUp" class="is-size-3">Set Up environment</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum doloremque, corporis, in
+                    odio facilis tempora modi culpa repellendus non pariatur accusantium omnis aut! Mollitia nihil quis
+                    praesentium sapiente iste.</p>
+
+                <textarea disabled rows="20" cols="51" style="width: 100%;;" readonly>
+
+
+                            <!DOCTYPE html>
+                               <html>
+                              
+                               <head>
+                                  <meta charset='utf-8'>
+                                  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                                  <title>Page Title</title>
+                                  <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                  <link rel='stylesheet' type='text/css' media='screen' href='test.css'>
+                                  <script src='main.js'></script>
+                               </head>
+                                
+                               <body>
+                    </textarea>
+                <br>
+
+
+                <h2 id="starterTemplate" class="is-size-3">Starter Template</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum doloremque, corporis, in
+                    odio facilis tempora modi culpa repellendus non pariatur accusantium omnis aut! Mollitia nihil quis
+                    praesentium sapiente iste.</p>
+
+                <textarea disabled rows="20" cols="51" style="width: 100%;;" readonly>
+
+
+                            <!DOCTYPE html>
+                               <html>
+                              
+                               <head>
+                                  <meta charset='utf-8'>
+                                  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                                  <title>Page Title</title>
+                                  <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                  <link rel='stylesheet' type='text/css' media='screen' href='test.css'>
+                                  <script src='main.js'></script>
+                               </head>
+                                
+                               <body>
+                    </textarea>
+                <br>
+
+
+                <h2 id="heroImg" class="is-size-3">How to Make Hero Image</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum doloremque, corporis, in
+                    odio facilis tempora modi culpa repellendus non pariatur accusantium omnis aut! Mollitia nihil quis
+                    praesentium sapiente iste.</p>
+
+                <textarea disabled rows="20" cols="51" style="width: 100%;;" readonly>
+
+
+                            <!DOCTYPE html>
+                               <html>
+                              
+                               <head>
+                                  <meta charset='utf-8'>
+                                  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                                  <title>Page Title</title>
+                                  <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                  <link rel='stylesheet' type='text/css' media='screen' href='test.css'>
+                                  <script src='main.js'></script>
+                               </head>
+                                
+                               <body>
+                    </textarea>
+
+            </div>
+        </div>
+
+    </section>
+    </body>
+    <footer class="footer">
+            <div class="container content has-text-centered">
+        
+                <img src="http://socialwedia.com/avatars/ryersonuniversity.png" class="is-pulled-left" width="50" style="margin-bottom: 5%">
+        
+        
+                <a href="home.html">About Us</a>
+                <a href="" style="margin-left: 3%;">Team</a>
+                <a href="" style="margin-left: 3%;">Project</a>
+                <a href="" style="margin-left: 3%;">FAQ</a>
+        
+            </div>
+        </footer>
 
 </html>
