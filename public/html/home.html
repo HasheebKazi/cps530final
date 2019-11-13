@@ -7,37 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HOME</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#ffffff">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', () => {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
 
             // Get all "navbar-burger" elements
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
             // Check if there are any navbar burgers
             if ($navbarBurgers.length > 0) {
 
                 // Add a click event on each of them
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
 
                         // Get the target from the "data-target" attribute
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
+                        var target = $el.dataset.target;
+                        var $target = document.getElementById(target);
 
-                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                        el.classList.toggle('is-active is-dark');
-                        $target.classList.toggle('is-active is-dark');
+                        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
 
                     });
                 });
             }
 
-        });</script>
+        });
+    </script>
 </head>
 
 <body>
@@ -46,50 +48,45 @@
         <!-- Hero head: will stick at the top -->
 
         <div class="hero-head">
-                <header class="navbar">
-                        <div class="container">
-                            <div class="navbar-brand">
-                                <a class="navbar-item">
-                                    <img src="http://socialwedia.com/avatars/ryersonuniversity.png" style="width:50; height: 50;" alt="Logo">  | Ryerson University
-                                </a>
-                                <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </span>
-                            </div>
-                            <div id="navbarMenuHeroC" class="navbar-menu">
-                                    <div class="navbar-end">
-                                            <a class="navbar-item">
-                                                    Home
-                                                </a>
-                                
-                                                <a class="navbar-item">
-                                                    Why Bulma
-                                                </a>
-                                
-                                                <a class="navbar-item">
-                                                    Why NodeJS
-                                                </a>
-                                
-                                                <a class="navbar-item">
-                                                    Team
-                                                </a>
-                                
-                                                <a class="navbar-item">
-                                                        Tutorials
-                                                      </a>
-                                    </div>
-                            </div>
+            <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+                <div class="container">
+
+                    <!-- logo or branding image on left side -->
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="/">
+                            <!-- <img src="https://bulma.io/images/bulma-logo.png" -->
+                                <!-- alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28"> -->
+                        </a>
+                        <div class="navbar-burger" data-target="navbar-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                    </header>
+                    </div>
+
+                    <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
+                    <div class="navbar-menu" id="navbar-menu">
+                        <!-- navbar items | left side -->
+
+                        <!-- navbar items | right side -->
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active" href="/"> 1</a>
+                            <a class="navbar-item" href="#">2</a>
+                            <a class="navbar-item" href="#">3</a>
+                            <a class="navbar-item" href="#">4</a>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
         </div>
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
             <div class="container has-text-centered">
 
 
-                <img src="http://socialwedia.com/avatars/ryersonuniversity.png" style="width:30px; height: 30px;" alt="CPS530 final project">
+                <img src="http://socialwedia.com/avatars/ryersonuniversity.png" style="width:30px; height: 30px;"
+                    alt="CPS530 final project">
                 <h1 class="title is-1">CPS530 Final Project</h1>
 
 
@@ -101,7 +98,8 @@
         <div class="container" style="margin-bottom: 3%">
             <div class="columns">
                 <div class="column">
-                    <img src="https://mixkit.imgix.net/art/326/326-original.png-1000h.png?q=80&fm=jpg&h=700&q=50&dpr=2" width="80%">
+                    <img src="https://mixkit.imgix.net/art/326/326-original.png-1000h.png?q=80&fm=jpg&h=700&q=50&dpr=2"
+                        width="80%">
                 </div>
                 <div class="column">
 
@@ -136,16 +134,19 @@
                     <div class="box is-one-quarter">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                 </div>
                 <div class="column">
-                    <div class="box is-full">Autem commodi rerum animi quos architecto, magni sapiente cumque iure harum rem fugit earum natus nam reprehenderit perferendis eligendi mollitia quia quod! tours</div>
+                    <div class="box is-full">Autem commodi rerum animi quos architecto, magni sapiente cumque iure harum
+                        rem fugit earum natus nam reprehenderit perferendis eligendi mollitia quia quod! tours</div>
                 </div>
 
             </div>
             <div class="columns">
                 <div class="column">
-                    <div class="box is-full">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus tempora qui aspernatur iusto </div>
+                    <div class="box is-full">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus tempora
+                        qui aspernatur iusto </div>
                 </div>
                 <div class="column">
-                    <div class="box is-full">perspiciatis, tempore hic quis necessitatibus veniam doloremque dignissimos similique, dolorem molestias possimus culpa ut ad sapiente enim?</div>
+                    <div class="box is-full">perspiciatis, tempore hic quis necessitatibus veniam doloremque dignissimos
+                        similique, dolorem molestias possimus culpa ut ad sapiente enim?</div>
                 </div>
                 <div class="column">
                     <div class="box is-tw">similique, dolorem molestias possimus culpa</div>
@@ -168,7 +169,7 @@
                         <div class="card">
                             <header class="card-header">
                                 <p class="card-header-title">
-                                    Lorem ipsum dolor sit amet consectetur 
+                                    Lorem ipsum dolor sit amet consectetur
                                 </p>
                             </header>
                             <div class="card-content">
@@ -204,12 +205,13 @@
         </div>
     </section>
     <!-- <img src="Whangaehu.png" style="background-repeat: no-repeat; width: 100%; background-size: cover;"> -->
-    
+
 </body>
 <footer class="footer">
     <div class="container content has-text-centered">
 
-        <img src="http://socialwedia.com/avatars/ryersonuniversity.png" class="is-pulled-left" width="50" style="margin-bottom: 5%">
+        <img src="http://socialwedia.com/avatars/ryersonuniversity.png" class="is-pulled-left" width="50"
+            style="margin-bottom: 5%">
 
 
         <a href="home.html">About Us</a>
