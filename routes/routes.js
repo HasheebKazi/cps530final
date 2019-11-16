@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/', mainController.getHomePage);
 
 // // page 2: 
-// router.get('/2', mainController.getPage2);
+router.get('/install', mainController.getInstall);
 
 // // page 3: 
 // router.get('/3', mainController.getPage3);
