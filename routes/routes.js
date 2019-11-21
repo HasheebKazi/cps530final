@@ -12,16 +12,16 @@ router.get('/', mainController.getHomePage);
 // // page 2: 
 router.get('/install', mainController.getInstall);
 
-// // page 3: 
-// router.get('/3', mainController.getPage3);
+// page 3: 
+router.get('/conclusion', mainController.getConclusion);
 
-// // page 4: 
-// router.get('/4', mainController.getPage4);
+// page 4: 
+router.get('/credits', mainController.getCredits);
 
-// // page 5: 
-// router.get('/5', mainController.getPage5);
+// page 5: 
+router.get('/whybulma', mainController.getWhyBulma);
 
-// // page 6: 
-// router.get('/6', mainController.getPage6);
+// page 6: 
+router.get('/whynodejs', mainController.getWhyNodeJs);
 
 module.exports = router;
