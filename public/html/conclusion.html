@@ -13,6 +13,11 @@
     <link rel='stylesheet' href='https://kingsora.github.io/OverlayScrollbars/etc/os-theme-thin-dark.css'>
     <link rel='stylesheet' href="../css/prism.css">
     <link rel="stylesheet" href="../css/cheatsheet.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- jQuery - used for smooth scrolling when transitioning between sections -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
 </head>
 
@@ -51,20 +56,6 @@
                 </div>
             </nav>
         </div>
-        <!-- Hero content: will be in the left -->
-        <!-- <div class="hero-body">
-            <div class="container has-text-left">
-
-
-                <img src="http://socialwedia.com/avatars/ryersonuniversity.png" style="width:30px; height: 30px;"
-                    alt="CPS530 final project">
-                <h1 class="title is-size-1 is-size-1-mobile">CPS530 Final Project</h1>
-                <h2 class="subtitle is-size-3 is-size-4-mobile">Why NodeJs</h2>
-                <a class="button is-link is-rounded is-size-1-mobile" onclick="typeWriterPopularity()"
-                    href="#overview">What is NodeJS?</a>
-
-            </div>
-        </div> -->
     </section>
 
     <section class="hero is-medium is-info is-bold" id="overview">
@@ -75,12 +66,11 @@
                 </h1>
                 <br>
                 <h2 class="subtitle is-size-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente inventore id amet quaerat ipsam in quam voluptatum ratione dolorum illum aliquam sit, quisquam enim, veritatis blanditiis fuga, similique vitae ducimus!
+                    Bulma and NodeJS make a great pair for front- and back-end development. Working with both has been a great learning experience, and the two frameworks are easy to learn, even if one has no prior experience with them.
                 </h2>
-                <div class="has-text-right"><a class="button is-link is-rounded " onclick="typeWriterStrengths()"
-                        href="#part2">Next Part?</a></div>
-
-
+                <div class="has-text-right">
+                    <a class="button is-link is-rounded " href="#part2">Our experience with Bulma</a>
+                </div>
             </div>
         </div>
     </section>
@@ -89,12 +79,36 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title is-size-1">
-                    Title
+                    Our experience with Bulma
                 </h1>
                 <br>
                 <h2 class="subtitle is-size-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptas explicabo, voluptate porro quos possimus molestiae velit nihil quibusdam voluptatibus non fugit alias error corporis, inventore debitis rerum labore harum.
+                    Using Bulma, creating good-looking dynamic webpages was a breeze. 
+                    <br>
+                    Bulma is very easy to install and set up, and being flexbox-based means it is very customizable.
                 </h2>
+                <div class="has-text-right">
+                    <a class="button is-link is-rounded " href="#part3">Our experience with NodeJS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-medium is-info is-bold" id="part3">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1">
+                    Our experience with NodeJS
+                </h1>
+                <br>
+                <h2 class="subtitle is-size-3">
+                    Working with NodeJS is very simple and straightforward, even beginners can pick it up and get started within minutes. 
+                    <br>
+                    Setting up NodeJS is also extremely simple, and easily met our expectations for a backend framework.  
+                </h2>
+                <div class="has-text-right">
+                    <a class="button is-link is-rounded " href="#part4">next section, if needed</a>
+                </div>
             </div>
         </div>
     </section>
@@ -115,7 +129,13 @@
         document.addEventListener("DOMContentLoaded", function () {
             //The first argument are the elements to which the plugin shall be initialized
             //The second argument has to be at least a empty object or a object with your desired options
-            OverlayScrollbars(document.querySelectorAll("body"), {});
+            var instance = OverlayScrollbars(document.querySelectorAll("body"), {});
+
+            //Smooth scrolling to target element when button is pressed.
+            $("a[href^='#']").click(function(e) {
+                e.preventDefault();
+                instance.scroll($($(this).attr("href")), 500);
+            });
         });
     </script>
 </body>

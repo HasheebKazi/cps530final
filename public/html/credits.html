@@ -13,6 +13,11 @@
     <link rel='stylesheet' href='https://kingsora.github.io/OverlayScrollbars/etc/os-theme-thin-dark.css'>
     <link rel='stylesheet' href="../css/prism.css">
     <link rel="stylesheet" href="../css/cheatsheet.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
 </head>
 
@@ -77,10 +82,7 @@
                 <h2 class="subtitle is-size-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in totam pariatur nesciunt officiis fugiat, nam blanditiis voluptatum quod culpa exercitationem nihil quidem velit sit necessitatibus, sunt hic omnis rerum!
                 </h2>
-                <div class="has-text-right"><a class="button is-link is-rounded " onclick="typeWriterStrengths()"
-                        href="#p1">See credits!</a></div>
-
-
+                <div class="has-text-right"><a class="button is-link is-rounded " href="#p1">See credits!</a></div>
             </div>
         </div>
     </section>
@@ -98,13 +100,74 @@
                 <h2 class="subtitle is-size-3">
                     STUFF I DID.
                 </h2>
-                <div class="has-text-right"><a class="button is-link is-rounded " onclick="typeWriterStrengths()"
-                        href="#p2">Credits person 2!</a></div>
-
-
+                <div class="has-text-right">
+                    <a class="button is-link is-rounded " onclick="typeWriterStrengths()" href="#p2">Credits person 2!</a>
+                    </div>
             </div>
         </div>
     </section>
+
+    <section class="hero is-medium is-info is-bold" id="p2">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-size-1">
+                        PERSON NAME
+                    </h1>
+                    <h2>
+                        student no: 1231231234
+                    </h2>
+                    <br>
+                    <h2 class="subtitle is-size-3">
+                        STUFF I DID.
+                    </h2>
+                    <div class="has-text-right">
+                        <a class="button is-link is-rounded " onclick="typeWriterStrengths()" href="#p3">Credits person 3!</a>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero is-medium is-info is-bold" id="p3">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title is-size-1">
+                            PERSON NAME
+                        </h1>
+                        <h2>
+                            student no: 1231231234
+                        </h2>
+                        <br>
+                        <h2 class="subtitle is-size-3">
+                            STUFF I DID.
+                        </h2>
+                        <div class="has-text-right">
+                            <a class="button is-link is-rounded " onclick="typeWriterStrengths()" href="#p4">Credits person 4!</a>
+                            </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hero is-medium is-info is-bold" id="p4">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title is-size-1">
+                                PERSON NAME
+                            </h1>
+                            <h2>
+                                student no: 1231231234
+                            </h2>
+                            <br>
+                            <h2 class="subtitle is-size-3">
+                                STUFF I DID.
+                            </h2>
+                            <div class="has-text-right">
+                                <!-- Shouldn't need a button on the last one -->
+                                <!-- If we put in a references section, we'll use the button for that -->
+                                <!-- <a class="button is-link is-rounded " onclick="typeWriterStrengths()" href="#p4">Credits person 2!</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>
 
@@ -121,7 +184,13 @@
         document.addEventListener("DOMContentLoaded", function () {
             //The first argument are the elements to which the plugin shall be initialized
             //The second argument has to be at least a empty object or a object with your desired options
-            OverlayScrollbars(document.querySelectorAll("body"), {});
+            var instance = OverlayScrollbars(document.querySelectorAll("body"), {});
+
+            //Smooth scrolling to target element when button is pressed.
+            $("a[href^='#']").click(function(e) {
+                e.preventDefault();
+                instance.scroll($($(this).attr("href")), 500);
+            });
         });
     </script>
 </body>
