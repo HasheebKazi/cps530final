@@ -9,6 +9,13 @@ const router = express.Router();
 // page 1: home page
 router.get('/', mainController.getHomePage);
 
+
+// demo page
+router.get('/demo', mainController.getDemoPage);
+
+// tutorial page
+router.get('/tutorial', mainController.getTutorialPage);
+
 // // page 2: 
 router.get('/install', mainController.getInstall);
 

@@ -24,3 +24,11 @@ exports.getWhyNodeJs = (req, res, next) => {
     res.sendFile(path.join(__dirname + '/../public/html' + '/whynodejs.html'));
 };
 
+exports.getTutorialPage = (req, res, next) => {
+    res.sendFile(path.join(__dirname + '/../public/html' + '/layout.html'));
+};
+
+exports.getDemoPage = (req, res, next) => {
+    res.sendFile(path.join(__dirname + '/../public/html' + '/demo.html'));
+};
+
