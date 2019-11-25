@@ -22,8 +22,12 @@
 </head>
 
 <body>
-    <section class="hero is-primary">
+
+    <section class="hero is-medium is-info is-bold" id="overview">
+
         <div class="hero-head">
+
+
             <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
                 <div class="container">
 
@@ -46,19 +50,22 @@
 
                         <!-- navbar items | right side -->
                         <div class="navbar-end">
-                            <a class="navbar-item is-active" href="/"> 1</a>
-                            <a class="navbar-item" href="#">2</a>
-                            <a class="navbar-item" href="#">3</a>
-                            <a class="navbar-item" href="#">4</a>
+                            <a class="navbar-item" href="/">home</a>
+                            <a class="navbar-item" href="/tutorial">Tutorial</a>
+                            <a class="navbar-item" href="/home">Demo</a>
+
+                            <a class="navbar-item" href="/install">installation guide</a>
+                            <a class="navbar-item" href="/whynodejs">NodeJs Info</a>
+                            <a class="navbar-item" href="/whybulma">Bulma Info</a>
+                            <a class="navbar-item is-active" href="/conclusion">Conclusion</a>
+                            <a class="navbar-item" href="/credits">Credits</a>
                         </div>
 
                     </div>
                 </div>
             </nav>
         </div>
-    </section>
 
-    <section class="hero is-medium is-info is-bold" id="overview">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title is-size-1">
@@ -66,7 +73,9 @@
                 </h1>
                 <br>
                 <h2 class="subtitle is-size-3">
-                    Bulma and NodeJS make a great pair for front- and back-end development. Working with both has been a great learning experience, and the two frameworks are easy to learn, even if one has no prior experience with them.
+                    Bulma and NodeJS make a great pair for front- and back-end development. Working with both has been a
+                    great learning experience, and the two frameworks are easy to learn, even if one has no prior
+                    experience with them.
                 </h2>
                 <div class="has-text-right">
                     <a class="button is-link is-rounded " href="#part2">Our experience with Bulma</a>
@@ -83,7 +92,7 @@
                 </h1>
                 <br>
                 <h2 class="subtitle is-size-3">
-                    Using Bulma, creating good-looking dynamic webpages was a breeze. 
+                    Using Bulma, creating good-looking dynamic webpages was a breeze.
                     <br>
                     Bulma is very easy to install and set up, and being flexbox-based means it is very customizable.
                 </h2>
@@ -102,9 +111,10 @@
                 </h1>
                 <br>
                 <h2 class="subtitle is-size-3">
-                    Working with NodeJS is very simple and straightforward, even beginners can pick it up and get started within minutes. 
+                    Working with NodeJS is very simple and straightforward, even beginners can pick it up and get
+                    started within minutes.
                     <br>
-                    Setting up NodeJS is also extremely simple, and easily met our expectations for a backend framework.  
+                    Setting up NodeJS is also extremely simple, and easily met our expectations for a backend framework.
                 </h2>
                 <div class="has-text-right">
                     <a class="button is-link is-rounded " href="#part4">next section, if needed</a>
@@ -115,6 +125,35 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Get all "navbar-burger" elements
+            var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(function ($el) {
+                    $el.addEventListener('click', function () {
+
+                        // Get the target from the "data-target" attribute
+                        var target = $el.dataset.target;
+                        var $target = document.getElementById(target);
+
+                        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
 
     <script>
         window.addEventListener('resize', () => {
@@ -132,7 +171,7 @@
             var instance = OverlayScrollbars(document.querySelectorAll("body"), {});
 
             //Smooth scrolling to target element when button is pressed.
-            $("a[href^='#']").click(function(e) {
+            $("a[href^='#']").click(function (e) {
                 e.preventDefault();
                 instance.scroll($($(this).attr("href")), 500);
             });
