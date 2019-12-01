@@ -11,8 +11,13 @@
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
     <link rel='stylesheet' href='https://kingsora.github.io/OverlayScrollbars/etc/os-theme-thin-dark.css'>
+    <link rel='stylesheet' href="../css/main.css">
     <link rel='stylesheet' href="../css/prism.css">
     <link rel="stylesheet" href="../css/cheatsheet.css">
+
+    <!-- jQuery - used for smooth scrolling when transitioning between sections -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
 
     <style>
@@ -229,7 +234,13 @@
         document.addEventListener("DOMContentLoaded", function () {
             //The first argument are the elements to which the plugin shall be initialized
             //The second argument has to be at least a empty object or a object with your desired options
-            OverlayScrollbars(document.querySelectorAll("body"), {});
+            var instance = OverlayScrollbars(document.querySelectorAll("body"), {});
+
+            //Smooth scrolling to target element when button is pressed.
+            $("a[href^='#']").click(function (e) {
+                e.preventDefault();
+                instance.scroll($($(this).attr("href")), 500);
+            });
         });
     </script>
 </body>
