@@ -14,7 +14,35 @@
     <link rel='stylesheet' href="../css/prism.css">
     <link rel="stylesheet" href="../css/cheatsheet.css">
     <link rel="stylesheet" href="../css/main.css">
+    <style>
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'GFS Didot', serif;
+        }
+        body {
+            background-color:#1c1c1e;
+            size: 1.6rem;;
+            font-family: 'Montserrat', serif;
+        }
 
+        a{
+            color: 5fa9ee;
+        }
+
+
+        textarea {
+            /* background-image: url("beanstalk.png"); */
+            background-color: #262626;
+            background-size: 100%;
+            background-repeat: repeat;
+            color: #fefefe;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        footer > div > a {
+            color:white;
+        }
+    </style>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -24,7 +52,7 @@
 <body>
 
 
-    <section class="hero is-medium is-info is-bold" id="overview">
+    <section class="hero is-medium is-dark is-bold" id="overview">
 
             <div class="hero-head">
 
@@ -51,11 +79,11 @@
         
                                 <!-- navbar items | right side -->
                                 <div class="navbar-end">
-                                    <a class="navbar-item" href="/">home</a>
+                                    <a class="navbar-item" href="/">Home</a>
                                     <a class="navbar-item" href="/tutorial">Tutorial</a>
                                     <a class="navbar-item" href="/demo">Demo</a>
         
-                                    <a class="navbar-item" href="/install">installation guide</a>
+                                    <a class="navbar-item" href="/install">Installation guide</a>
                                     <a class="navbar-item" href="/whynodejs">NodeJs Info</a>
                                     <a class="navbar-item" href="/whybulma">Bulma Info</a>
                                     <a class="navbar-item" href="/conclusion">Conclusion</a>
@@ -74,80 +102,81 @@
                 </h1>
                 <br>
                 <h2 class="subtitle is-size-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in totam pariatur nesciunt officiis fugiat, nam blanditiis voluptatum quod culpa exercitationem nihil quidem velit sit necessitatibus, sunt hic omnis rerum!
+                    Here are the work that we've done, for each group member.
                 </h2>
-                <div class="has-text-right"><a class="button is-link is-rounded " href="#p1">See credits!</a></div>
+                <div class="has-text-right"><a class="button is-light is-rounded " href="#p1">See credits!</a></div>
             </div>
         </div>
     </section>
 
-    <section class="hero is-medium is-info is-bold" id="p1">
+    <section class="hero is-medium is-white is-bold" id="p1">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title is-size-1">
                     Hasheeb Kazi
                 </h1>
-                <h2>
-                    student no: 500535798
+                <h2 class="subtitle is-size-4">
+                    Student #: 500535798
                 </h2>
                 <br>
                 <h2 class="subtitle is-size-3">
                     I created the backend server which includes all the routing and controller code. I also created content for the frontend pages and implemented the navigation. Finally I deployed the application to <a href="" target="_blank">Heroku</a>.
                 </h2>
                 <div class="has-text-right">
-                    <a class="button is-link is-rounded " onclick="typeWriterStrengths()" href="#p2">Credits person 2!</a>
+                    <a class="button is-light is-rounded " onclick="typeWriterStrengths()" href="#p2"><img src="https://img.icons8.com/metro/26/000000/circled-chevron-right.png"></a>                    
                     </div>
             </div>
         </div>
     </section>
 
-    <section class="hero is-medium is-info is-bold" id="p2">
+    <section class="hero is-medium is-dark is-bold" id="p2">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title is-size-1">
-                        PERSON NAME
+                        Al Alwaini
                     </h1>
-                    <h2>
-                        student no: 1231231234
+                    <h2 class="subtitle is-size-4">
+                        Student no: 500666534
                     </h2>
                     <br>
                     <h2 class="subtitle is-size-3">
-                        STUFF I DID.
+                        I deal with the front end. I also craft the UI and UX for each pages, making the the example landing page, and writing the tutorial
                     </h2>
                     <div class="has-text-right">
-                        <a class="button is-link is-rounded " onclick="typeWriterStrengths()" href="#p3">Credits person 3!</a>
+                        <a class="button is-white is-rounded " onclick="typeWriterStrengths()" href="#p3"><img src="https://img.icons8.com/metro/26/000000/circled-chevron-right.png"></a>
                         </div>
                 </div>
             </div>
         </section>
 
-        <section class="hero is-medium is-info is-bold" id="p3">
+        <section class="hero is-medium is-white is-bold" id="p3">
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title is-size-1">
                             PERSON NAME
                         </h1>
-                        <h2>
-                            student no: 1231231234
+                        <h2 class="subtitle is-size-4">
+                            Student #: 1231231234
                         </h2>
                         <br>
                         <h2 class="subtitle is-size-3">
                             STUFF I DID.
                         </h2>
                         <div class="has-text-right">
-                            <a class="button is-link is-rounded " onclick="typeWriterStrengths()" href="#p4">Credits person 4!</a>
+                    <a class="button is-light is-rounded " onclick="typeWriterStrengths()" href="#p4"><img src="https://img.icons8.com/metro/26/000000/circled-chevron-right.png"></a>                    
+                
                             </div>
                     </div>
                 </div>
             </section>
 
-            <section class="hero is-medium is-info is-bold" id="p4">
+            <section class="hero is-medium is-dark is-bold" id="p4">
                     <div class="hero-body">
                         <div class="container">
                             <h1 class="title is-size-1">
                                 Owen Goodwin
                             </h1>
-                            <h2>
+                            <h2 class="subtitle is-size-4">
                                 Student #: 500909196
                             </h2>
                             <br>
