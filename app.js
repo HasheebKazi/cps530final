@@ -17,4 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-app.listen(3000);
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 5400;
+}
+app.listen(port);
